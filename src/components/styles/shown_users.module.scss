@@ -1,0 +1,23 @@
+@import 'src/style/mixins.scss';
+
+.wrapper {
+  @include robotoMX;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .userContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .avatarContainer {
+      @include avatarMX;
+
+      .avatar {
+        @include avatarMX;
+      }
+    }
+  }
+}
