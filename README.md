@@ -9,3 +9,7 @@ For starting project:
 2 - `npm i`
 
 3 - `npm start`
+
+
+React app into Github Pages:
+https://ivanvfedenko.github.io/gh_users/#/
