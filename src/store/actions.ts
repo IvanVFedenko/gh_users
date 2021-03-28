@@ -6,17 +6,26 @@ export const set_users = (value: User[]) => ({
   type: action.SET_USERS,
   value,
 });
-// export const get_movie = (value: TMovie) => ({ type: action.GET_MOVIE, value });
-// export const del_movie = () => ({ type: action.DEL_MOVIE });
-// export const get_shows = (value) => ({ type: action.GET_SHOWS, value });
-// export const get_show = (value) => ({ type: action.GET_SHOW, value });
 
-export const set_users_thunk = () => async (dispatch) => {
-  const movies = await api.get_all_users();
-  dispatch(set_users(movies));
+export const set_user = (value: User) => ({ type: action.SET_USER, value });
+export const del_user = () => ({ type: action.DEL_USER });
+
+export const set_current_page = (value: string | null) => ({
+  type: action.SET_CURRENT_PAGE,
+  value,
+});
+
+export const set_users_thunk = (since: string = '0') => async (
+  dispatch: (arg0: { type: string; value?: User[] }) => void
+) => {
+  const users = await api.get_all_users(since);
+  dispatch(set_users(users));
+  dispatch(del_user());
 };
 
-// export const get_one_movie_thunk = (id) => async (dispatch) => {
-//   const movie = await api.get_one_movie(id);
-//   dispatch(get_movie(movie));
-// };
+export const get_one_user_thunk = (login: string) => async (
+  dispatch: (arg0: { type: string; value: User }) => void
+) => {
+  const user = await api.get_one_user(login);
+  dispatch(set_user(user));
+};

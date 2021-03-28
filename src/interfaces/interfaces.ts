@@ -18,3 +18,20 @@ export interface User {
   type: string;
   site_admin: boolean;
 }
+
+export interface DetailedUser extends User {
+  bio: string;
+  blog: string;
+  company: string;
+  created_at: string;
+  email: string;
+  followers: number;
+  following: number;
+  hireable: null;
+  location: string;
+  name: string;
+  public_gists: number;
+  public_repos: number;
+  twitter_username: string;
+  updated_at: string;
+}

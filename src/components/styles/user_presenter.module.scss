@@ -1,0 +1,205 @@
+@import 'src/style/mixins.scss';
+
+.wrapper {
+  @include robotoMX;
+  width: 50rem;
+  margin: 1rem auto;
+  position: relative;
+
+  @media (max-width: 500px) {
+    width: unset;
+  }
+
+  .backButton {
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(184, 182, 182);
+    position: absolute;
+    left: -7rem;
+    top: 6rem;
+    clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    @media (max-width: 501px) {
+      display: none;
+    }
+  }
+
+  .backTextG {
+    position: absolute;
+    left: -4.4rem;
+    top: 5.5rem;
+
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+
+    @media (max-width: 501px) {
+      display: none;
+    }
+  }
+
+  .backTextB {
+    position: absolute;
+    left: -4.8rem;
+    top: 8.4rem;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+
+    @media (max-width: 501px) {
+      display: none;
+    }
+  }
+
+  .backButton:hover {
+    background-color: rgb(136, 190, 252);
+
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+  }
+
+  .upperBlock {
+    display: flex;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    .infoWrapper {
+      height: 12rem;
+      @media (max-width: 500px) {
+        height: 15rem;
+        margin-top: 5.5rem;
+      }
+
+      .detailWrapper {
+        display: flex;
+        align-items: center;
+        height: 2rem;
+
+        .detailName {
+          width: 7rem;
+          margin: 0;
+        }
+
+        .detail {
+          width: 20rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0;
+          color: rgb(93, 92, 92);
+          font-weight: 700;
+
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .avatarContainer {
+      width: 20rem;
+      height: 20rem;
+
+      @media (max-width: 500px) {
+        width: 20rem;
+        height: 20rem;
+        margin: auto;
+      }
+
+      .avatar {
+        width: 18rem;
+        height: 18rem;
+        object-fit: contain;
+
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+
+        -webkit-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+        -moz-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+        box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+
+        @media (max-width: 500px) {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+    }
+  }
+  .redirectButton {
+    position: absolute;
+    right: 36%;
+    top: 15.8rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    border: 0.1rem solid #efefef;
+    width: 12rem;
+    height: 2rem;
+    background-color: #efefef;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+    box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+
+    a {
+      @include avatarMX;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: rgb(61, 61, 61);
+      width: 100%;
+    }
+
+    @media (max-width: 500px) {
+      right: 0;
+      top: 21rem;
+      transform: translate(-50%, 50%);
+      -webkit-transform: translate(-50%, 50%);
+      -moz-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+      -o-transform: translate(-50%, 50%);
+    }
+  }
+  .redirectButton:hover {
+    background-color: rgb(136, 190, 252);
+    border-color: rgb(136, 190, 252);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+  }
+}

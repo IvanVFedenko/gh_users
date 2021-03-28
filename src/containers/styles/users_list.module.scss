@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    .paginationButton {
+      width: 3rem;
+      height: 3rem;
+      margin: 0.5rem;
+
+      border-radius: 0.3rem;
+      -webkit-border-radius: 0.3rem;
+      -moz-border-radius: 0.3rem;
+      -ms-border-radius: 0.3rem;
+      -o-border-radius: 0.3rem;
+
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+
+      -webkit-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+      -moz-box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+      box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.42);
+
+      @media (max-width: 500px) {
+        cursor: unset;
+      }
+    }
+
+    .paginationButton:hover {
+      background-color: rgb(215, 229, 247);
+
+      transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+    }
+
+    .active {
+      background-color: rgb(136, 190, 252);
+
+      transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+    }
+  }
+}
