@@ -1,6 +1,6 @@
 # gh_users
 
-Objective: Implement a single page application (SPA)
+Objective: Implement a single page application (SPA):
 
 1. SPA must be written in React using the open API GitHub;
 
@@ -18,7 +18,6 @@ page. Also, when reloading, save the state of the current page.
 profile with the current user on page reload;
 
 
-app with pagination and redux.
 
 For starting project:
 
