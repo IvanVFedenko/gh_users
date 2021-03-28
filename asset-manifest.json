@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/IvanVFedenko/gh_users/static/css/main.c68efac6.chunk.css",
+    "main.js": "/IvanVFedenko/gh_users/static/js/main.c4b66e93.chunk.js",
+    "main.js.map": "/IvanVFedenko/gh_users/static/js/main.c4b66e93.chunk.js.map",
+    "runtime-main.js": "/IvanVFedenko/gh_users/static/js/runtime-main.da982d4a.js",
+    "runtime-main.js.map": "/IvanVFedenko/gh_users/static/js/runtime-main.da982d4a.js.map",
+    "static/js/2.66c37138.chunk.js": "/IvanVFedenko/gh_users/static/js/2.66c37138.chunk.js",
+    "static/js/2.66c37138.chunk.js.map": "/IvanVFedenko/gh_users/static/js/2.66c37138.chunk.js.map",
+    "index.html": "/IvanVFedenko/gh_users/index.html",
+    "static/css/main.c68efac6.chunk.css.map": "/IvanVFedenko/gh_users/static/css/main.c68efac6.chunk.css.map",
+    "static/js/2.66c37138.chunk.js.LICENSE.txt": "/IvanVFedenko/gh_users/static/js/2.66c37138.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da982d4a.js",
+    "static/js/2.66c37138.chunk.js",
+    "static/css/main.c68efac6.chunk.css",
+    "static/js/main.c4b66e93.chunk.js"
+  ]
+}
