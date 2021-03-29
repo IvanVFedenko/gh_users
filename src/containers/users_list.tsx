@@ -5,6 +5,7 @@ import styles from './styles/users_list.module.scss';
 import { User } from '../interfaces/interfaces';
 import ShownUsers from '../components/shown_users';
 import cn from 'classnames';
+import { UsersIDEnum } from '../enums/enums';
 
 const UsersList: FC = () => {
   const dispatch = useDispatch();
@@ -29,33 +30,33 @@ const UsersList: FC = () => {
       <div className={styles.buttonContainer}>
         <button
           className={cn(styles.paginationButton, {
-            [styles.active]: curr_page === '0',
+            [styles.active]: curr_page === UsersIDEnum.FIRSTPAGE,
           })}
-          onClick={() => dispatch(set_current_page('0'))}
+          onClick={() => dispatch(set_current_page(UsersIDEnum.FIRSTPAGE))}
         >
           1
         </button>
         <button
           className={cn(styles.paginationButton, {
-            [styles.active]: curr_page === '19',
+            [styles.active]: curr_page === UsersIDEnum.SECONDPAGE,
           })}
-          onClick={() => dispatch(set_current_page('19'))}
+          onClick={() => dispatch(set_current_page(UsersIDEnum.SECONDPAGE))}
         >
           2
         </button>
         <button
           className={cn(styles.paginationButton, {
-            [styles.active]: curr_page === '30',
+            [styles.active]: curr_page === UsersIDEnum.THIRDPAGE,
           })}
-          onClick={() => dispatch(set_current_page('30'))}
+          onClick={() => dispatch(set_current_page(UsersIDEnum.THIRDPAGE))}
         >
           3
         </button>
         <button
           className={cn(styles.paginationButton, {
-            [styles.active]: curr_page === '46',
+            [styles.active]: curr_page === UsersIDEnum.FOURTHPAGE,
           })}
-          onClick={() => dispatch(set_current_page('46'))}
+          onClick={() => dispatch(set_current_page(UsersIDEnum.FOURTHPAGE))}
         >
           4
         </button>
