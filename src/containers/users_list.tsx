@@ -24,7 +24,6 @@ const UsersList: FC = () => {
 
   useEffect(() => {
     dispatch(set_users_thunk('10', curr_page));
-    window.location.hash = `users?per_page=10&since=${curr_page}`;
   }, [dispatch, curr_page]);
 
   console.log(window.location.href);
