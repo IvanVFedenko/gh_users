@@ -21,8 +21,10 @@ const UsersList: FC = () => {
   );
 
   useEffect(() => {
-    dispatch(set_users_thunk(curr_page));
+    dispatch(set_users_thunk('10', curr_page));
   }, [dispatch, curr_page]);
+
+  console.log(window.location.href);
 
   return (
     <section className={styles.wrapper}>

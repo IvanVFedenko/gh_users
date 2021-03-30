@@ -15,10 +15,11 @@ export const set_current_page = (value: string | null) => ({
   value,
 });
 
-export const set_users_thunk = (since: string = '0') => async (
-  dispatch: (arg0: { type: string; value?: User[] }) => void
-) => {
-  const users = await api.get_all_users(since);
+export const set_users_thunk = (
+  per_page: string = '10',
+  since: string = '0'
+) => async (dispatch: (arg0: { type: string; value?: User[] }) => void) => {
+  const users = await api.get_all_users(per_page, since);
   dispatch(set_users(users));
   dispatch(del_user());
 };

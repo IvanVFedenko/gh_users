@@ -7,6 +7,7 @@ import UsersList from './containers/users_list';
 import OneUser from './containers/user';
 
 function App() {
+  const url = window.location.href;
   return (
     <div>
       <Route path="/" exact component={UsersList} />
