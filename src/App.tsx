@@ -9,7 +9,7 @@ import OneUser from './containers/user';
 function App() {
   return (
     <div>
-      <Route path="/" exact component={UsersList} />
+      <Route path="/:page?" exact component={UsersList} />
       <Route path="/users_list/:login" exact component={OneUser} />
     </div>
   );
