@@ -5,6 +5,7 @@ export const get_all_users = async (per_page: string, since: string) => {
   let url = new URL(users_url);
   url.searchParams.set('per_page', `${per_page}`);
   url.searchParams.set('since', `${since}`);
+  console.log(url);
 
   const request = await axios.get(`${url}`);
   const all_users = request.data;
